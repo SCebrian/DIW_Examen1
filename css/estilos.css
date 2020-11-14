@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat&display=swap');
+
+html, body, .grid-container { 
+    margin: 0; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px 150px 150px 150px 150px;
+  grid-template-rows: auto auto auto;
+  gap: 5px 5px;
+  grid-template-areas:
+    "foto1 foto1 foto2 foto3 foto4"
+    "foto1 foto1 foto5 foto6 .";
+  margin-top: -20px;
+}
+
+.foto1 { 
+    grid-area: foto1; 
+}
+
+.foto2 { 
+    grid-area: foto2; 
+}
+
+.foto3 { 
+    grid-area: foto3; 
+}
+
+.foto4 { 
+    grid-area: foto4; 
+}
+
+.foto5 { 
+    grid-area: foto5; 
+}
+
+.foto6 { 
+    grid-area: foto6; 
+}
+
+.grid-container * {
+  position: relative;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+h2{
+    font-family: 'Alfa Slab One', cursive;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    color: #bbb4b4;
+    background-color: black;
+    font-size: 1rem;
+    width: 90%;
+
+    transition: box-shadow linear 1s;
+
+}
+h3:hover{
+    box-shadow: 1px 1px 1px 1px yellow;
+    text-shadow: 0px 0px 1px white;
+
+}
+
+.foto1 > h3:nth-child(2){
+    top: -55px;
+    font-size: 1rem;
+}
+.foto2 > h3:nth-child(2), 
+.foto3 > h3:nth-child(2), 
+.foto4 > h3:nth-child(2),
+.foto5 > h3:nth-child(2),
+.foto6 > h3:nth-child(2) {
+    font-size: 0.8rem;
+    top: -60px;
+    height: 20%;
+}
+
+
+.grid-container_dos{
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px 150px;
+  grid-template-rows: 150px 150px 150px;
+  gap: 5px 5px;
+  grid-template-areas:
+    "foto1 foto1 foto2 foto3 foto4"
+    "foto1 foto1 foto5 foto6 .";
+  margin-top: -20px;
+
+}
+
+.grid-container_dos * {
+    position: relative;
+  }
+
+  .grid-container_dos > div > h3 {
+    font-size: 0.6rem;
+    top: -60px;
+    height: 25%;
+
+  }
+
+
+
+
+
+
+
+@media(max-device-width: 700px){ 
+    
+    .grid-container {
+        display: block;
+       
+      }
+
+    .grid-container_dos {
+        display: block;
+    }
+      
+}
+
